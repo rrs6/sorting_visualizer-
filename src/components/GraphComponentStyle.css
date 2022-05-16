@@ -1,0 +1,80 @@
+.container{
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+}
+.bars{
+    background: rgb(255, 255, 255);
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.bar{
+    display: inline-block;
+    width: 10px;
+    border-right: solid 0.1px white;
+    height: 200px;
+}
+button{
+    background: rgb(39, 228, 32);
+    transition: all 0.5s ease-in-out;
+}
+button:hover{
+    background: rgb(13, 172, 8);
+}
+.button-newRandom{
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 15px;
+}
+.button-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+}
+.button-sort{
+    padding: 10px 15px;
+    border: none;
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    background: rgb(24, 206, 18);
+    cursor: pointer;
+    border-radius: 3px;
+}
+.input-numbars{
+    /* background: yellow; */
+    width: 90%;
+}
+input[type=range] {
+    margin: 10px 0px;
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: rgb(42, 73, 167); /* Otherwise white in Chrome */
+    cursor: pointer;
+  }
+  .input-text{
+      color: white;
+      margin: 0px;
+      font-size: 1.3rem;
+  }
+  @media only screen and (max-width: 600px){
+      .button-area{
+          flex-wrap: wrap;
+          margin-top: 40px;
+          justify-content: center;
+      }
+      button{
+          font-size: 0.7rem;
+          width: 120px;
+          margin-bottom: 20px;
+      }
+  }
