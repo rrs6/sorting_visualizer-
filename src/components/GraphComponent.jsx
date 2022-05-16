@@ -197,8 +197,8 @@ class GraphComponent extends React.Component{
                     bars[anim[it1-1][1]].style.backgroundColor = 'red';
                 }
                 if(anim[it1].length>2){
-                    bars[anim[it1][0]].style.backgroundColor = 'black';
-                    bars[anim[it1][1]].style.backgroundColor = 'black';
+                    bars[anim[it1][0]].style.backgroundColor = 'rgba(74, 74, 74, 1)';
+                    bars[anim[it1][1]].style.backgroundColor = 'rgba(74, 74, 74, 1)';
                     let auxH = bars[anim[it1][0]].style.height;
                     bars[anim[it1][0]].style.height = bars[anim[it1][1]].style.height;
                     bars[anim[it1][1]].style.height = auxH;
