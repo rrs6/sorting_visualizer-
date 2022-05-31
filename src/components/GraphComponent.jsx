@@ -164,14 +164,14 @@ class GraphComponent extends React.Component{
     }
     quickSort(){
         sort = true;
-        let array = this.state.numbers;
+        let array = this.state.numbers.slice();
         let i = 0;
         let j = array.length-1;
         let anim = [];
         let bars = document.getElementsByClassName('bar');
         let arrayOrd = quicksort(anim, array, i, j);
         let it1 = 0;
-        let interval = setInterval( () => {
+        let interval = setInterval(() => {
             if(anim.length<=it1){
                 if(it1-1>=0&&anim[it1-1].length>2){
                     bars[anim[it1-1][0]].style.backgroundColor = 'red';
@@ -275,7 +275,7 @@ class GraphComponent extends React.Component{
                     {this.state.numbers.map((value, index) => (<div className="bar" style={{height:((value))+'%', width:(100/this.props.numOfBars)+'%', background: 'red'}} key={index}></div>))}
                 </div>
                 <div className="input-numbars">
-                    <input className="input" type='range' min='5' max='200' value={this.state.numOfBars} onChange={(e) => {this.setState({numOfBars:e.target.value});}}></input>
+                    <input className="input" type='range' min='5' max={(window.innerWidth)>600?'200':'75'} value={this.state.numOfBars} onChange={(e) => {this.setState({numOfBars:e.target.value});}}></input>
                     <p className="input-text">Number of elements: {this.state.numOfBars}</p>
                 </div>
                 <div className="button-area">
@@ -285,6 +285,9 @@ class GraphComponent extends React.Component{
                     <button onClick={()=>{if(sort===false)this.Mergesort()}}className="button-sort">Merge Sort</button>
                     <button onClick={()=>{if(sort===false)this.quickSort()}}className="button-sort">Quick Sort</button>
                 </div>
+                <footer className="footer">
+                    <p className="footer-text">Made by me (<a target="_blank" rel="noreferrer" className="footer-link" href="https://github.com/rrs6">rrs6</a>)</p>
+                </footer>
             </div>
         );
     }

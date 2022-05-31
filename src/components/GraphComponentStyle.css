@@ -52,12 +52,34 @@ button:hover{
 }
 .input-numbars{
     /* background: yellow; */
-    width: 90%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    margin-bottom: 10px;
+}
+.footer {
+    background-color: rgb(40, 84, 218);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+}
+.footer-text {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.footer-link {
+    color: rgb(29, 29, 29);
+    text-decoration: none;
 }
 input[type=range] {
     margin: 10px 0px;
+    height: 12px;
     -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-    width: 100%; /* Specific width is required for Firefox. */
+    width: 90%; /* Specific width is required for Firefox. */
     background: rgb(42, 73, 167); /* Otherwise white in Chrome */
     cursor: pointer;
   }
